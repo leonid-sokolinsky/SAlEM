@@ -244,7 +244,6 @@ void PC_bsf_ParametersOutput(PT_bsf_parameter_T parameter) {
 	cout << "PP_EPS_POINT_IN_HALFSPACE\t" << PP_EPS_POINT_IN_HALFSPACE << endl;
 	cout << "PP_EPS_PROJECTION_ROUND\t\t" << PP_EPS_PROJECTION_ROUND << endl;
 	cout << "PP_OBJECTIVE_VECTOR_LENGTH\t" << PP_OBJECTIVE_VECTOR_LENGTH << endl;
-	cout << "PP_MAX_EDGE_NUM\t\t\t" << PP_MAX_EDGE_NUM << endl;
 	cout << "PP_REAL_TIME\t\t\t" << PP_REAL_TIME << endl;
 #ifdef PP_GRADIENT
 	cout << "PP_PROBE_LENGTH\t\t\t" << PP_PROBE_LENGTH << endl;
@@ -289,6 +288,7 @@ void PC_bsf_ProblemOutput(PT_bsf_reduceElem_T* reduceResult, int reduceCounter, 
 	Print_Vector(PD_u_cur);	cout << endl;
 #ifdef PP_DEBUG
 	cout << "Distance to polytope: " << Distance_PointToPolytope(PD_u_cur) << endl;
+	cout << "Maximum number of vertex edges: " << PD_maxEdgeNum << endl;
 #endif // PP_DEBUG
 
 } // end PC_bsf_ProblemOutput
@@ -1707,6 +1707,8 @@ namespace PF {
 			cout << "\nPerhaps you should decrease parameter PP_EPS_POINT_IN_HALFSPACE or increase parameter PP_OBJECTIVE_VECTOR_LENGTH.\n";
 			exit(1);
 		}
+
+		PD_maxEdgeNum = PF_MAX(PD_maxEdgeNum, PD_mh);
 	}
 
 }

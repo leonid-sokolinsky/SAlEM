@@ -20,10 +20,8 @@ Initial surface points for these problems were calculated using BSF-Apex-Quest.
 #define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
 //-----------------------------------------------------------------------
-//#define PP_MAX_EDGE_NUM				2047			// Maximal number of edges that include surface point
-#define PP_MAX_EDGE_NUM				22			// Maximal number of edges that include surface point
+#define PP_REAL_TIME				20				// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 #define PP_PROBE_LENGTH				0.001			// Length of probe shift
-#define PP_REAL_TIME				PP_MAX_EDGE_NUM	// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //-------------------------------------------------------------------------------
 
 /*============================== simpleCube LP problem ==========================*
@@ -91,7 +89,7 @@ Initial surface points for these problems were calculated using BSF-Apex-Quest.
 #define PP_MAX_OBJ_VALUE 		49998
 //-------------------------------------------------------------------------------
 
-/*============================== angle03 LP problem =============================*/
+/*============================== angle03 LP problem =============================*
 #define PP_PROBLEM_NAME	"angle03"
 #define PP_M 3		// Number of equations (number of rows in *.mtx)
 #define PP_N 6		// Number of variables (number of cols in *.mtx)
@@ -147,7 +145,7 @@ Initial surface points for these problems were calculated using BSF-Apex-Quest.
 #define PP_MAX_OBJ_VALUE 		852.0289179009729
 //------------------------------------------------------------------------------
 
-/*============================== rnd5-100 LP problem ===========================*
+/*============================== rnd5-100 LP problem ===========================*/
 #define PP_PROBLEM_NAME	"rnd5-100"
 #define PP_M 105		// Number of equations (number of rows in *.mtx)
 #define PP_N 110		// Number of variables (number of cols in *.mtx)

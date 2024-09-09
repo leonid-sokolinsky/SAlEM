@@ -15,12 +15,13 @@ This source code has been produced with using BSF-skeleton
 #define PP_BSF_MAX_JOB_CASE 0
 
 //--------------------------- OpenMP Parameters ---------------------------
-// OpenMP mode is impossible here!
+#define PP_BSF_OMP				// If PP_BSF_OMP is defined then OpenMP is turned on for Map Step
+#define PP_BSF_NUM_THREADS 6	// If PP_BSF_NUM_THREADS is udefined then all accessable threads are used
 
 //--------------- BSF Lists parameters (For "No MPI" only) ----------------
 #include "Problem-Parameters.h"
-#define PP_BSF_MAP_LIST_LENGTH		PP_MM
-#define PP_BSF_REDUCE_LIST_LENGTH	PP_MM
+#define PP_BSF_MAP_LIST_LENGTH		PP_REAL_TIME
+#define PP_BSF_REDUCE_LIST_LENGTH	PP_REAL_TIME
 #define PP_BSF_REDUCE_LIST_1_LENGTH	1
 #define PP_BSF_REDUCE_LIST_2_LENGTH	1
 #define PP_BSF_REDUCE_LIST_3_LENGTH	1

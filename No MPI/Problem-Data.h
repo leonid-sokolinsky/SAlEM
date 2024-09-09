@@ -15,7 +15,9 @@ static int PD_mh;					// Number of hyperplanes that include surface point
 static int PD_ma;					// Number of hyperplanes used for pseudoprojection
 static int PD_me;					// Number of edges that include surface point
 static int PD_iterNo;				// Number of iterations
+static int  PD_maxEdgeNum;			// Maximum number of vertex edges
 static double PD_objF_cur;			// Objective function value in curerent vertex
+
 //========================== Problem structures ====================================
 static PT_matrix_T PD_A;			// Matrix of coefficients of inequalities
 static PT_column_T PD_b;			// Column of the constant terms of the system Ax <= PD_b

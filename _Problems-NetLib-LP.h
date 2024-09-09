@@ -38,6 +38,7 @@ LP problems were obtained using BSF-LPP-Generator.
 //-----------------------------------------------------------------------
 #define PP_MAX_OBJ_VALUE 			464.7531
 #define PP_PROBE_LENGTH				0.001			// Length of probe shift
+#define PP_REAL_TIME				120				// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //-------------------------------------------------------------------------------
 
 /*============================== beaconfd LP problem ==================*
