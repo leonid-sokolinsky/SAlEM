@@ -14,7 +14,7 @@ struct PT_bsf_parameter_T {		// Type of Parameter for workers (current approxima
 };
 
 struct PT_bsf_mapElem_T {		// Type of map-list elements
-	int* edgeCode;
+	int* stub;
 };
 
 struct PT_bsf_reduceElem_T {	// Type of reduce-list elements for Job 0 (default)	

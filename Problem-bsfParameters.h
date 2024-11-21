@@ -15,7 +15,9 @@ This source code has been produced with using BSF-skeleton
 #define PP_BSF_MAX_JOB_CASE 0
 
 //--------------------------- OpenMP Parameters ---------------------------
-// OpenMP mode is impossible here!
+// MPI is not allowed here!
+//#define PP_BSF_OMP			// If PP_BSF_OMP is defined then OpenMP is turned on for Map Step
+//#define PP_BSF_NUM_THREADS 6	// If PP_BSF_NUM_THREADS is udefined then all accessable threads are used
 
 // MPI
 // MPI
