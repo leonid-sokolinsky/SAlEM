@@ -32,9 +32,8 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-7			// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
 #define PP_REAL_TIME				300				// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 #define PP_MAX_PSEUDOPROJECTING_ITER 10000			// Maximum number of iterations to interrupt calculation of pseudoprojection on flat
 //--------------------------------------------------------------------------
@@ -56,17 +55,16 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-7			// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
-#define PP_REAL_TIME				600			// This parameter limits the calculation time (compilator limit: 2 147 483 647)
+#define PP_REAL_TIME				6000			// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 #define PP_MAX_PSEUDOPROJECTING_ITER 100000			// Maximum number of iterations to interrupt calculation of pseudoprojection on flat
 //--------------------------------------------------------------------------
-// Elapsed time: 9608.0186
-// Number of iterations: 0
-// Computed objective value: -33837.75644768299
+// Elapsed time: 37318.432
+// Number of iterations: 2
+// Computed objective value: -33813.86407276181
 // Maximal objective value:  -33592.4858072
-// Relative error = 0.0073
+// Relative error = 0.00659
 // //--------------------------------------------------------------------------
 
 /*============================== blend LP problem ==========================*
@@ -80,9 +78,8 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-3			// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
 #define PP_REAL_TIME				10000			// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
@@ -98,9 +95,8 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-9	// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
 #define PP_REAL_TIME				10		// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //--------------------------------------------------------------------------
 
@@ -114,9 +110,8 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-9	// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
 #define PP_REAL_TIME				1		// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //--------------------------------------------------------------------------
 
@@ -131,9 +126,8 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-7			// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
 #define PP_REAL_TIME				3000			// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //--------------------------------------------------------------------------
 
@@ -148,9 +142,8 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-9			// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
 #define PP_REAL_TIME				1				// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //--------------------------------------------------------------------------
 
@@ -165,9 +158,8 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-7			// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
 #define PP_REAL_TIME				1000			// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //----------------------------------------------------------------------------
 // Elapsed time: 17601
@@ -188,9 +180,9 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-7			// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7			// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.001			// Length of probe shift
+
 #define PP_REAL_TIME				3000			// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //--------------------------------------------------------------------------
 // Elapsed time: 2468.7376
@@ -218,8 +210,7 @@ This include file is part of Problem-Parameters.h
 #define PP_EPS_ZERO					1E-9				// Precision for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	(PP_EPS_ZERO*10)	// Precision for MakeHyperplaneList()
 #define PP_EPS_ON_HYPERPLANE		(PP_EPS_ZERO*10)	// Accuracy of belonging to hyperplane
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO			// Precision of rounding vector r
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO			// Precision of rounding vector r
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+7				// Length of Objective Vector
-#define PP_PROBE_LENGTH				0.0001				// Length of probe shift
 #define PP_REAL_TIME				1000				// This parameter limits the calculation time (compilator limit: 2 147 483 647)
 //----------------------------------------------------------------------------/**/

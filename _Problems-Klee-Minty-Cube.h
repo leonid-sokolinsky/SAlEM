@@ -11,11 +11,9 @@ This include file is part of Problem-Parameters.h
 //============================== Problem Parameters ======================
 // PP_OBJECTIVE_VECTOR_LENGTH - direct dependence on dimension PD_n.
 // P_EPS_ZERO - inverse dependence on PP_OBJECTIVE_VECTOR_LENGTH.
-// PP_EPS_PROJECTION_ROUND - inverse dependence on PP_OBJECTIVE_VECTOR_LENGTH. 
+// PP_EPS_BIPPROJECTION_ROUND - inverse dependence on PP_OBJECTIVE_VECTOR_LENGTH. 
 //						This parameter affects terminate condition when 
 //						calculating pseudoprojection.
-//-----------------------------------------------------------------------
-#define PP_PROBE_LENGTH			0.1		// Length of probe shift
 //=============================================================================
 
 /*============================== Klee-Minty5 LP problem ==============================*
@@ -29,7 +27,7 @@ This include file is part of Problem-Parameters.h
 //---------------------------------- Method parameters ------------------------
 #define PP_EPS_ZERO					1E-9			// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	PP_EPS_ZERO		// Precision for MakeHyperplaneList()
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding pseudoprojecting vectors
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO		// Precision of rounding pseudoprojecting vectors
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+9			// Length of Objective Vector
 //-----------------------------------------------------------------------------
 // _________________________________________________ 1 _____________________________________________________
@@ -72,7 +70,7 @@ This include file is part of Problem-Parameters.h
 //---------------------------------- Method parameters ------------------------
 #define PP_EPS_ZERO					1E-9			// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	1E-8		// Precision for MakeHyperplaneList()
-#define PP_EPS_PROJECTION_ROUND		1E-6			// Precision of rounding pseudoprojecting vectors
+#define PP_EPS_BIPPROJECTION_ROUND		1E-6			// Precision of rounding pseudoprojecting vectors
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+13			// Length of Objective Vector
 //-----------------------------------------------------------------------------
 // _________________________________________________ 1 _____________________________________________________
@@ -121,7 +119,7 @@ This include file is part of Problem-Parameters.h
 //---------------------------------- Method parameters ------------------------
 #define PP_EPS_ZERO					1E-9		// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	1E-6		// Precision for MakeHyperplaneList()
-#define PP_EPS_PROJECTION_ROUND		1E-5		// Precision of rounding pseudoprojecting vectors
+#define PP_EPS_BIPPROJECTION_ROUND		1E-5		// Precision of rounding pseudoprojecting vectors
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+15		// Length of Objective Vector
 // _________________________________________________ 1 _____________________________________________________
 // Edge code: 6.   Hyperplanes: {0, 7, 8, 9, 10, 11}.      Shift = 5       F(x) = 320
@@ -177,7 +175,7 @@ This include file is part of Problem-Parameters.h
 //---------------------------------- Method parameters ------------------------
 #define PP_EPS_ZERO					1E-9			// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	1E-4		// Precision for MakeHyperplaneList()
-#define PP_EPS_PROJECTION_ROUND		1E-3			// Precision of rounding pseudoprojecting vectors
+#define PP_EPS_BIPPROJECTION_ROUND		1E-3			// Precision of rounding pseudoprojecting vectors
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+17			// Length of Objective Vector
 //=============================================================================
 
@@ -193,7 +191,7 @@ This include file is part of Problem-Parameters.h
 //---------------------------------- Method parameters ------------------------
 #define PP_EPS_ZERO					1E-9	// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	1E-4	// Precision for MakeHyperplaneList()
-#define PP_EPS_PROJECTION_ROUND		1E-3	// Precision of rounding pseudoprojecting vectors
+#define PP_EPS_BIPPROJECTION_ROUND		1E-3	// Precision of rounding pseudoprojecting vectors
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+18	// Length of Objective Vector
 //=============================================================================
 

@@ -19,15 +19,13 @@ This source code has been produced with using BSF-skeleton
 #include "_Problems-Klee-Minty-Cube.h"
 #define PP_PATH "../../Set-of-LP-Problems/Klee-Minty-Cube/"
 
-/**
+/**/
 #include "_Problems-Miscellaneous.h"
 #define PP_PATH "../../Set-of-LP-Problems/Miscellaneous-LP/"
-//#define PP_PATH "../../../../Set-of-LP-Problems/Miscellaneous-LP/"
 
-/**/
+/**
 #include "_Problems-NetLib-LP.h"
 //#define PP_PATH "../../Set-of-LP-Problems/NetLib-LP/"
-#define PP_PATH "../../../../Set-of-LP-Problems/NetLib-LP/"
 
 /*---------------------------------------------------------------------*/
 
@@ -38,8 +36,8 @@ This source code has been produced with using BSF-skeleton
 //#define PP_MATRIX_OUTPUT
 //#define PP_SAVE_RESULT
 //#define PP_SAVE_ITER_RESULT
-//#define PP_GRADIENT
-//#define BIPROJECTION
+#define PP_GRADIENT
+#define BIPROJECTION
 //#define MPS_MIN_OF_OBJECTIVE_FUNCTION
 
 //================================ Problem Paramrters ===========================
@@ -48,7 +46,9 @@ This source code has been produced with using BSF-skeleton
 #else
 #define PP_MM							(PP_M+2*PP_N)		// Maximal number of constraints
 #endif // PP_MPS_FORMAT
+
 #define PP_MAX_ITER_COUNT				10000000000		// Maximal count of iterations
+#define PP_MAX_PSEUDOPROJECTING_ITER	100000			// Maximum acceptable number of iterations in Pseudoprojection on flat
 #define PP_DBL_MAX						1E+308			// Highest float value
 #define PP_RND_MAX						32767			// This is necessary for compatibility with different compilers
 //-------------------------- Input/Outpoot Parameters ---------------------------
@@ -63,7 +63,7 @@ This source code has been produced with using BSF-skeleton
 #define PP_MTX_POSTFIX_HI	"_hi.mtx"
 #define PP_MTX_POSTFIX_LO	"_lo.mtx"
 #define PP_MTX_POSTFIX_SO	"_so.mtx"	// Solution point
-#define PP_MTX_POSTFIX_U0	"_u0.mtx"	// Starting point
+#define PP_MTX_POSTFIX_V	"_v.mtx"	// Starting point
 //------------------------- MPS format ----------------
 #define PP_MPS_NAME_LENGTH	9
 #define PP_MPS_PREFIX		"lp_"

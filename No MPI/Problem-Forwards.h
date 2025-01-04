@@ -21,8 +21,8 @@ namespace SF {
 	double	Distance_PointToPoint(PT_vector_T x, PT_vector_T y);
 	double	Distance_PointToPolytope(PT_vector_T x);
 	double	DistanceSQR_PointToPoint(PT_vector_T x, PT_vector_T y);
-	void	Flat_BipProjection(int* flatHyperplanes, int m_flat, PT_vector_T v, double eps, int maxProjectingIter, PT_vector_T w, int* success);
-	void	Flat_MaxProjection(int* flatHyperplanes, int m_flat, PT_vector_T v, double eps, int maxProjectingIter, PT_vector_T w, int* success);
+	void	Flat_BipProjection(int* flatHyperplanes, int m_flat, PT_vector_T v, double eps_bipprojection_round, double eps_zero, int maxProjectingIter, PT_vector_T w, int* success);
+	void	Flat_MaxProjection(int* flatHyperplanes, int m_flat, PT_vector_T v, double eps_maxprojection_zero, double eps_zero, int maxProjectingIter, PT_vector_T w, int* success);
 	void	JumpingOnPolytope(PT_vector_T startPoint, PT_vector_T directionVector, PT_vector_T finishPoint, double eps);
 	void	MakeColumnOfNorms(PT_matrix_T A, PT_column_T norm_a);
 	void	MakeListOfNotIncludingHalfspaces(PT_vector_T x, int* notIncludingHalfspacesList, double eps);
@@ -74,6 +74,7 @@ namespace SF {
 	bool	PointBelongsPolytope(PT_vector_T x, double eps);
 	void	PointHomothety(PT_vector_T x, PT_vector_T center, double ratio);
 	bool	PointInsideHalfspace_i(PT_vector_T x, int i, double eps);
+	bool	PointIsVertex_i(PT_vector_T x, double  eps);
 	int		PointLocation_i(PT_vector_T x, int i, double eps, double* a_DoT_x_MinuS_b);
 	void	PolytopeHomothety(PT_vector_T center, double ratio);
 	void	Print_Constraints();

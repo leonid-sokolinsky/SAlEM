@@ -13,20 +13,18 @@ Initial surface points for these problems were calculated using BSF-Apex-Quest.
 //============================== Problem Parameters =============================
 // PP_OBJECTIVE_VECTOR_LENGTH - direct dependence on dimension PD_n.
 // P_EPS_ZERO - inverse dependence on PP_OBJECTIVE_VECTOR_LENGTH.
-// PP_EPS_PROJECTION_ROUND - inverse dependence on PP_OBJECTIVE_VECTOR_LENGTH. 
+// PP_EPS_BIPPROJECTION_ROUND - inverse dependence on PP_OBJECTIVE_VECTOR_LENGTH. 
 //						This parameter affects terminate condition when 
 //						calculating pseudoprojection.
 //-------------------------------------------------------------------------------
 #define PP_EPS_ZERO					1E-9				// Accuracy for comparison with zero
 #define PP_EPS_POINT_IN_HALFSPACE	PP_EPS_ZERO			// Precision for point to be in halfspace
 //#define PP_EPS_MOVING_ON_POLYTOPE	(PP_EPS_ZERO/100)	// Precision for moving on polytope (affects Shift = 0)
-#define PP_EPS_PROJECTION_ROUND		PP_EPS_ZERO			// Precision of rounding pseudoprojecting vectors
+#define PP_EPS_BIPPROJECTION_ROUND		PP_EPS_ZERO			// Precision of rounding pseudoprojecting vectors
 #define PP_OBJECTIVE_VECTOR_LENGTH	1E+10				// Length of Objective Vector
 //-------------------------------------------------------------------------------
 #define PP_M	16		// Number of equations (number of rows in *.mtx)
 #define PP_N	31		// Number of variables (number of cols in *.mtx)
-
-#define PP_PROBE_LENGTH			0.1		// Length of probe shift
 //=============================================================================
 
 /*============================== rnd15-0 LP problem ===========================*
