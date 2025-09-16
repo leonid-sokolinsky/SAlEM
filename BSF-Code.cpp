@@ -75,7 +75,7 @@ static void BC_Master() {// The head function of the master process.
 				BD_extendedReduceResult_P->reduceCounter,
 				&(BD_order.parameter),
 				&BD_newJobCase, &BD_exit);
-#ifdef PP_BSF_ITER_OUTPUT
+			#ifdef PP_BSF_ITER_OUTPUT
 			if (BD_iterCounter % PP_BSF_TRACE_COUNT == 0)
 				PC_bsf_IterOutput(
 					&BD_extendedReduceResult_P->elem,
@@ -83,7 +83,7 @@ static void BC_Master() {// The head function of the master process.
 					BD_order.parameter,
 					BD_t + MPI_Wtime(),
 					BD_newJobCase);
-#endif // PP_BSF_ITER_OUTPUT
+			#endif // PP_BSF_ITER_OUTPUT
 			break;
 		case 1:
 			PC_bsf_ProcessResults_1(
@@ -91,7 +91,7 @@ static void BC_Master() {// The head function of the master process.
 				BD_extendedReduceResult_P_1->reduceCounter,
 				&(BD_order.parameter),
 				&BD_newJobCase, &BD_exit);
-#ifdef PP_BSF_ITER_OUTPUT
+			#ifdef PP_BSF_ITER_OUTPUT
 			if (BD_iterCounter % PP_BSF_TRACE_COUNT == 0)
 				PC_bsf_IterOutput_1(
 					&BD_extendedReduceResult_P_1->elem,
@@ -99,7 +99,7 @@ static void BC_Master() {// The head function of the master process.
 					BD_order.parameter,
 					BD_t + MPI_Wtime(),
 					BD_newJobCase);
-#endif // PP_BSF_ITER_OUTPUT
+			#endif // PP_BSF_ITER_OUTPUT
 			break;
 		case 2:
 			PC_bsf_ProcessResults_2(
@@ -107,7 +107,7 @@ static void BC_Master() {// The head function of the master process.
 				BD_extendedReduceResult_P_2->reduceCounter,
 				&(BD_order.parameter),
 				&BD_newJobCase, &BD_exit);
-#ifdef PP_BSF_ITER_OUTPUT
+			#ifdef PP_BSF_ITER_OUTPUT
 			if (BD_iterCounter % PP_BSF_TRACE_COUNT == 0)
 				PC_bsf_IterOutput_2(
 					&BD_extendedReduceResult_P_2->elem,
@@ -115,7 +115,7 @@ static void BC_Master() {// The head function of the master process.
 					BD_order.parameter,
 					BD_t + MPI_Wtime(),
 					BD_newJobCase);
-#endif // PP_BSF_ITER_OUTPUT
+			#endif // PP_BSF_ITER_OUTPUT
 			break;
 		case 3:
 			PC_bsf_ProcessResults_3(
@@ -123,7 +123,7 @@ static void BC_Master() {// The head function of the master process.
 				BD_extendedReduceResult_P_3->reduceCounter,
 				&(BD_order.parameter),
 				&BD_newJobCase, &BD_exit);
-#ifdef PP_BSF_ITER_OUTPUT
+			#ifdef PP_BSF_ITER_OUTPUT
 			if (BD_iterCounter % PP_BSF_TRACE_COUNT == 0)
 				PC_bsf_IterOutput_3(
 					&BD_extendedReduceResult_P_3->elem,
@@ -131,7 +131,7 @@ static void BC_Master() {// The head function of the master process.
 					BD_order.parameter,
 					BD_t + MPI_Wtime(),
 					BD_newJobCase);
-#endif // PP_BSF_ITER_OUTPUT
+			#endif // PP_BSF_ITER_OUTPUT
 			break;
 		default:
 			cout << "BC_Master: Undefined job type!" << endl;
@@ -254,13 +254,13 @@ static bool BC_WorkerMap() { // Performs the Map function
 	PC_bsfAssignAddressOffset(BD_offset[BD_rank]);
 	PC_bsfAssignParameter(BD_order.parameter);
 	PC_bsf_IterInit(BD_order.parameter);
-#ifdef PP_BSF_OMP
-#ifdef PP_BSF_NUM_THREADS
-#pragma omp parallel for num_threads(PP_BSF_NUM_THREADS)
-#else
-#pragma omp parallel for
-#endif // PP_BSF_NUM_THREADS
-#endif // PP_BSF_OMP
+	#ifdef PP_BSF_OMP
+	#ifdef PP_BSF_NUM_THREADS
+	#pragma omp parallel for num_threads(PP_BSF_NUM_THREADS)
+	#else
+	#pragma omp parallel for
+	#endif // PP_BSF_NUM_THREADS
+	#endif // PP_BSF_OMP
 	for (int i = BD_offset[BD_rank]; i < BD_offset[BD_rank] + BD_sublistSize[BD_rank]; i++) {
 		int index;
 

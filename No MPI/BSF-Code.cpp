@@ -251,11 +251,11 @@ static bool BC_WorkerMap() { // Performs the Map function
 	PC_bsfAssignParameter(BD_order.parameter);
 	PC_bsf_IterInit(BD_order.parameter);
 #ifdef PP_BSF_OMP
-#ifdef PP_BNUM_THREADS
-#pragma omp parallel for num_threads(PP_BNUM_THREADS)
+#ifdef PP_BSF_NUM_THREADS
+#pragma omp parallel for num_threads(PP_BSF_NUM_THREADS)
 #else
 #pragma omp parallel for
-#endif // PP_BNUM_THREADS
+#endif // PP_BSF_NUM_THREADS
 #endif // PP_BSF_OMP
 	for (int i = 0; i < BD_listSize; i++) {
 		//

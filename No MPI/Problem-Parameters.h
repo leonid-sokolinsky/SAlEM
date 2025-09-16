@@ -5,56 +5,58 @@ Module: Problem-Parameters.h (Problem Parameters)
 Prefix: PP
 Authors: Alexander E. Zhulev & Leonid B. Sokolinsky
 This source code has been produced with using BSF-skeleton
-==============================================================================*/
+================================================================================*/
 
-/*----------------------------- Problems -------------------------------*/
+/*----------------------------- Problems ---------------------------------------*/
 
 //#define PP_PATH "Problems/"
 
 /**
-#include "../_Problems200_1000-0.h"
+#include "../_Problems05-1.h"
+#define PP_PATH "../../Set-of-LP-Problems/Rnd-LP/"
+
+/**
+#include "../_Problems10-1.h"
+#define PP_PATH "../../Set-of-LP-Problems/Rnd-LP/"
+
+/**
+#include "../_Problems100_1000-0.h"
 #define PP_PATH "../../Set-of-LP-Problems/Rnd-LP/"
 
 /**
 #include "../_Problems-Klee-Minty-Cube.h"
 #define PP_PATH "../../Set-of-LP-Problems/Klee-Minty-Cube/"
 
-/**/
+/**
 #include "../_Problems-Miscellaneous.h"
 #define PP_PATH "../../Set-of-LP-Problems/Miscellaneous-LP/"
 
-/**
+/**/
 #include "../_Problems-NetLib-LP.h"
 #define PP_PATH "../../Set-of-LP-Problems/NetLib-LP/"
 
-/*---------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
 
 #define PP_METHOD_NAME "SAlEM (no MPI)"
 
-//-------------------------- Compilation Modes -----------------------
+//-------------------------- Compilation Modes ---------------------------------
 #define PP_DEBUG
+#define PP_NORMALIZATION
 //#define PP_MATRIX_OUTPUT
-//#define PP_SAVE_RESULT
+//#define PP_GAUGE
+//#define PP_SAVE_LOCAL_RESULT
 //#define PP_SAVE_ITER_RESULT
-#define PP_GRADIENT
-#define BIPROJECTION
-//#define MPS_MIN_OF_OBJECTIVE_FUNCTION
+//#define PP_SAVE_RESULT
+#define PP_CHECK_MAX_OBJ_VALUE // Exit if relative error of computed maximum of objective function is less than PP_EPS_RELATIVE_ERROR (demands #define PP_MAX_OBJ_VALUE)
+//#define PP_OPT_MIN // Optimization by minimum
 
-//================================ Problem Paramrters ===========================
-#ifdef PP_MPS_FORMAT
-#define PP_MM							(PP_M+3*PP_N)		// Maximal number of constraints
-#else
-#define PP_MM							(PP_M+2*PP_N)		// Maximal number of constraints
-#endif // PP_MPS_FORMAT
-
-#define PP_MAX_ITER_COUNT				10000000000		// Maximal count of iterations
-#define PP_MAX_PSEUDOPROJECTING_ITER	100000			// Maximum acceptable number of iterations in Pseudoprojection on flat
-#define PP_DBL_MAX						1E+308			// Highest float value
-#define PP_RND_MAX						32767			// This is necessary for compatibility with different compilers
-//-------------------------- Input/Outpoot Parameters ---------------------------
+//================================ Problem Paramrters ==========================
+#define PP_MM							(PP_M+2*PP_N)	// Maximal number of constraints
+#define PP_EPS_JUMP_VECTOR_LEN			1E-3			// Minimum acceptable length of the jump vector
+//-------------------------- Input/Outpoot Parameters --------------------------
 #define PP_OUTPUT_LIMIT	30	// Number of Elements to output
 #define PP_SETW 16
-//------------------------- Matrix format ----------------
+//------------------------- Matrix format --------------------------------------
 #define PP_INFINITY			1E+308		// Highest bound in *_hi.mtx
 #define PP_MTX_PREFIX		"lp_"
 #define PP_MTX_POSTFIX_A	".mtx"
@@ -73,10 +75,6 @@ This source code has been produced with using BSF-skeleton
 //-------------------------- Jobs  -----------------------
 // Not used.
 //------------- Locations -------------
-#define PP_DEGENERATE_INEQUALITY	0
 #define PP_ON_HYPERPLANE			1
 #define PP_INSIDE_HALFSPACE			2
 #define PP_OUTSIDE_HALFSPACE		3
-#define PP_PARALLEL					4
-#define PP_RECESSIVE				5
-#define PP_NONDEGENERATE_PROJECTING	9
