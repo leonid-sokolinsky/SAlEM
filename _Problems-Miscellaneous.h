@@ -66,9 +66,9 @@ LP problems are available in https://github.com/leonid-sokolinsky/Set-of-LP-Prob
 // Distance to polytope: 7.7804045e-15
 //------------------------------------------------------------------------------
 
-/*============================== simpleCube LP problem =========================*
+/*============================== cube LP problem =========================*
 #define PP_MPS_FORMAT
-#define PP_PROBLEM_NAME	"simpleCube"
+#define PP_PROBLEM_NAME	"cube"
 #ifdef PP_MPS_FORMAT
 #define PP_M 3		// Number of constrains
 #define PP_N 3		// Number of variables
